@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>INST377 - Lab04 - JS</title>
+        <link rel="stylesheet" href="lab04-styling.css">
+    </head>
+
+    <body id="body">
+        <h1 id="heading">INST 377 - Lab04</h1>
+        
+        <!--main text-->
+        <div class="main-container">
+            <!--alert section-->
+            <form name="contactForm" class="alert-section" onsubmit="return(alertValidation())">
+                <label>Name:</label>
+                <input type="text" id="name">
+                <button type="submit">Alert Me!</button>
+            </form>
+            
+            <script type="text/javascript">
+                function alertValidation(){
+                    if(document.contactForm.name.value === ""){
+                        alert('Must input your name!');
+                        return false;
+                    } else {
+                        alert('Hi ' + contactForm.name.value +'!');
+                        
+                    }
+                }
+            </script>
+
+            <!--color section-->
+            <div class="color-section">
+                <button id='button' onclick="changeColor()">Change Color</button>
+                <script type="text/javascript">
+                    function changeColor(){
+                        if(document.getElementById('body').style.backgroundColor == 'rgb(138, 202, 146)'){
+                            const t = document.getElementById('body').style.backgroundColor = 'rgb(110, 156, 112)';
+                        } else {
+                            const t = document.getElementById('body').style.backgroundColor = 'rgb(138, 202, 146)';
+                        }
+                    }
+                </script>
+            </div>
+
+            <!--text section-->
+            <div class="text-section">
+                <form name="tester" onsubmit="return(regexValidation())">
+                    <label>Text Tester:</label>
+                    <input type="text" id="name">
+                    <button type="submit">Validate Text</button>
+                </form>
+                <!--remove special characters-->
+                <script type="text/javascript">
+                    function regexValidation(){
+                        const validationRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+                        if (validationRegex.test(document.tester.name.value)){
+                            alert('Remove special characters');
+                            return false;
+                        }
+                    }
+                </script>
+            </div>
+
+            <!--add section-->
+            <div class="add-section">
+                <button onclick="return(editHeading())">Add Text</button>
+                
+                <script type="text/javascript">
+                    function editHeading(){
+                        document.getElementById("heading").textContent="INST 377 - Lab04 Add Text"
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(110, 156, 112);
+}
+
+#heading{
+    margin:2%;
+
+}
+.main-container{
+    height:50%;
+    padding: 2%;
+    margin:2%;
+}
+
+.alert-section{
+    border: solid;
+    float:left;
+    width:35%;
+    padding:5%;
+    margin:2%;
+}
+.color-section{
+    border: solid;
+    float:right;
+    width:35%;
+    padding:5%;
+    margin:2%;
+}
+.text-section{
+    border: solid;
+    float:left;
+    width:35%;
+    padding:5%;
+    margin:2%;
+}
+.add-section{
+    border: solid;
+    float:right;
+    width:35%;
+    padding:5%;
+    margin:2%;
+}
